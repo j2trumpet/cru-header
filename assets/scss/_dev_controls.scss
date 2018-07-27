@@ -1,0 +1,28 @@
+// DEV CONTROLS
+
+body {
+  padding-bottom: calc(41px + 1rem);
+}
+
+#dev-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $cru-gray;
+  padding: 8px 0;
+  text-align: center;
+  border-top: white 1rem solid;
+  a {
+    color: $cru-white;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 16px;
+    &.active {
+      color: $cru-gold;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

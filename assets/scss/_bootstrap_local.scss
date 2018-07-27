@@ -1,0 +1,87 @@
+// BOOTSTRAP LOCAL
+// This copies Bootstrap styling so that the header will be consistent even if the site as a whole does not use Bootstrap
+
+/* reboot catch-all */
+*, ::after, ::before {
+   box-sizing: border-box;
+}
+
+/* reboot html */
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* reboot body */
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: $cru-white;
+}
+
+.bs-defaults {
+  .container {
+    width: 100%;
+    padding-right: $cru-grid-gutter-half-width;
+    padding-left: $cru-grid-gutter-half-width;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: $cru-grid-breakpoint-sm) {
+      max-width: $cru-container-max-width-sm;
+    }
+    @media (min-width: $cru-grid-breakpoint-md) {
+      max-width: $cru-container-max-width-md;
+    }
+    @media (min-width: $cru-grid-breakpoint-lg) {
+      max-width: $cru-container-max-width-lg;
+    }
+    @media (min-width: $cru-grid-breakpoint-xl) {
+      max-width: $cru-container-max-width-xl;
+    }
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -$cru-grid-gutter-half-width;
+    margin-left: -$cru-grid-gutter-half-width;
+  }
+  .col {
+    &-3, &-9 {
+      @include col-base;
+    }
+    &-3 {@include col-specs(25%);}
+    &-9 {@include col-specs(75%);}
+  }
+  .d-none {
+    display: none !important;
+  }
+  .d-block {
+    display: block !important;
+  }
+  @media (min-width: $cru-grid-breakpoint-sm) {
+    .d-sm-none {
+      display: none !important;
+    }
+    .d-sm-inline-block {
+      display: inline-block !important;
+    }
+  }
+  /* .pt-3, .py-3 {
+    padding-top: 1rem !important;
+  }
+  .pb-3, .py-3 {
+    padding-bottom: 1rem !important;
+  } */
+}

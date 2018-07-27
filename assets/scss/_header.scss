@@ -1,0 +1,310 @@
+// CRU STYLES
+
+body {
+  &.cru-org {
+    #cru-header {
+      .fa-globe {
+        margin-right: 0;
+        padding-right: 0;
+      }
+      .fa-shopping-cart {
+        display: none;
+      }
+    }
+    &.full-cart {
+      #cru-header {
+        .fa-globe {
+          margin-right: $top-header-nav-quarter-spacing;
+          padding-right: $top-header-nav-quarter-spacing;
+        }
+        .fa-shopping-cart {
+          display: inline-block;
+          @media (min-width: $cru-grid-breakpoint-sm) {
+            margin-right: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    #context-nav {
+      display: none;
+    }
+  }
+  &.give {
+    #cru-header {
+      .fa-globe {
+        display: none !important;
+      }
+      .fa-shopping-cart {
+        @media (min-width: $cru-grid-breakpoint-sm) {
+          margin-right: 0;
+          padding-right: 0;
+        }
+        .cart-item-count {
+          display: none;
+        }
+      }
+    }
+    &.full-cart {
+      #cru-header {
+        .fa-shopping-cart .cart-item-count {
+          display: block;
+        }
+      }
+    }
+  }
+  &.stuck {
+    height: 100%;
+    overflow-y: hidden;
+  }
+}
+
+#cru-header {
+  border-top: $cru-gold 2px solid;
+  padding-top: $cru-grid-gutter-half-width;
+  padding-bottom: $cru-grid-gutter-half-width;
+  .logo {
+    display: inline-block;
+    img {
+      width: auto;
+      height: $top-header-height-mobile;
+      @media (min-width: $cru-grid-breakpoint-sm) {
+        height: $top-header-height-desktop;
+      }
+    }
+  }
+  .header-nav {
+    text-align: right;
+    > a {
+      color: $cru-gray;
+      &:hover {
+        color: $cru-gold;
+      }
+      img {
+        width: auto;
+        height: 16px;
+      }
+    }
+  }
+  .header-nav-icon {
+    margin-left: $top-header-nav-quarter-spacing;
+    margin-right: $top-header-nav-quarter-spacing;
+    padding-left: $top-header-nav-quarter-spacing;
+    padding-right: $top-header-nav-quarter-spacing;
+    position: relative;
+    text-decoration: none;
+  }
+  .signin {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: $top-header-nav-half-spacing;
+    position: relative;
+    i {
+      margin-left: 6px;
+    }
+    &:hover .user-menu {
+      display: block;
+    }
+  }
+  .signin > .signin-name, .header-nav-icon {
+    display: inline-block;
+    line-height: $top-header-height-mobile;
+    @media (min-width: $cru-grid-breakpoint-sm) {
+      line-height: $top-header-height-desktop;
+    }
+  }
+  .signin, .header-nav-icon {
+    vertical-align: top;
+  }
+  .cart-item-count {
+    position: absolute;
+    font-family: $cru-font-family-sans-serif;
+    color: $cru-gray;
+    font-size: 11px;
+    font-weight: 700;
+    background-color: $cru-gold;
+    border-radius: 50%;
+    width: 17px;
+    text-align: center;
+    line-height: 17px !important;
+    top: 0;
+    right: 0;
+    @media (min-width: $cru-grid-breakpoint-sm) {
+      top: 5px;
+      right: -8px;
+    }
+  }
+  .user-menu {
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: -15px;
+    margin: 0;
+    padding: 8px 0;
+    background-color: $cru-white;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.1);
+    text-align: left;
+    z-index: 1000;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      &:first-child a {
+        color: $cru-gold;
+      }
+    }
+    a {
+      display: block;
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 26px;
+      white-space: nowrap;
+      text-decoration: none;
+      color: $cru-gray;
+      &:hover {
+        color: $cru-gold;
+      }
+    }
+    @media (max-width: $cru-grid-breakpoint-sm - 1px) {
+      top: -3px;
+    }
+  }
+  .fa-bars {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+#cru-header, #cru-nav {
+  font-family: $cru-font-family-sans-serif;
+  color: $cru-gray;
+  background-color: $cru-white;
+  border-bottom: $cru-silver 1px solid;
+}
+
+#cru-header .signin,
+#cru-nav .top-nav a,
+#context-nav a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $cru-gray;
+  text-decoration: none;
+  letter-spacing: .3px;
+  &:hover {
+    color: $cru-gold;
+  }
+}
+
+#cru-nav, #context-nav {
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+#cru-nav .top-nav, #context-nav ul {
+  white-space: nowrap;
+  overflow-x: auto;
+  li {
+    display: inline-block;
+    &:first-child a {
+      padding-left: 0;
+    }
+  }
+  a {
+    display: block;
+    line-height: $top-header-height-desktop;
+    padding-left: 8px;
+    padding-right: 8px;
+    i {
+      line-height: inherit;
+      font-size: 1rem;
+    }
+  }
+  @media (min-width: $cru-grid-breakpoint-lg) {
+    a {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+#cru-nav {
+  @media (max-width: $cru-grid-breakpoint-sm - 1px) {
+    display: none;
+  }
+  .top-nav {
+    margin-right: 28px;
+  }
+  .fa-search {
+    float: right;
+    line-height: $top-header-height-desktop;
+    padding-right: $top-header-nav-quarter-spacing;
+    text-decoration: none;
+    color: $cru-gray;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    &:hover {
+      color: $cru-gold;
+    }
+  }
+}
+
+#context-nav {
+  font-family: $cru-font-family-sans-serif;
+  background-color: $cru-gray;
+  a {
+    color: $cru-white;
+    font-weight: 500;
+    &.active {
+      color: $cru-gold;
+    }
+  }
+}
+
+#search-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: $cru-gray;
+  color: $cru-white;
+  text-align: center;
+  .container {
+    display: none;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  input {
+    width: 100%;
+    font-size: 48px;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+    letter-spacing: .5px;
+    color: $cru-white;
+    text-align: center;
+    font-family: $cru-font-family-sans-serif;
+    &::placeholder {color: $cru-white;}
+    &::-webkit-input-placeholder {color: $cru-white;}
+    &::-moz-placeholder {color: $cru-white;}
+    &:-ms-input-placeholder {color: $cru-white;}
+    &:-moz-placeholder {color: $cru-white;}
+    &:focus {
+      outline: none;
+    }
+  }
+  .fa-times {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    font-size: 32px;
+    cursor: pointer;
+  }
+}

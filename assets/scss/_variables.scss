@@ -1,0 +1,28 @@
+// VARIABLES
+
+$cru-grid-breakpoint-sm: 576px;
+$cru-grid-breakpoint-md: 768px;
+$cru-grid-breakpoint-lg: 992px;
+$cru-grid-breakpoint-xl: 1200px;
+
+$cru-container-max-width-sm: 540px;
+$cru-container-max-width-md: 720px;
+$cru-container-max-width-lg: 960px;
+$cru-container-max-width-xl: 1140px;
+
+$cru-grid-gutter-width: 30px;
+$cru-grid-gutter-half-width: $cru-grid-gutter-width/2;
+
+$cru-font-family-sans-serif: 'Source Sans Pro', sans-serif;
+
+$cru-gray: #5a5a5a;
+$cru-silver: #e6e6e6;
+$cru-gold: #f5be19;
+$cru-white: #ffffff;
+
+$top-header-height-mobile: 36px;
+$top-header-height-desktop: 46px;
+
+$top-header-nav-spacing: 24px;
+$top-header-nav-half-spacing: $top-header-nav-spacing/2;
+$top-header-nav-quarter-spacing: $top-header-nav-spacing/4;

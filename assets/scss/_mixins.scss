@@ -1,0 +1,16 @@
+// MIXINS
+
+@mixin col-base() {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: $cru-grid-gutter-half-width;
+  padding-left: $cru-grid-gutter-half-width;
+}
+
+@mixin col-specs($percent) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 $percent;
+  flex: 0 0 $percent;
+  max-width: $percent;
+}
