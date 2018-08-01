@@ -28,8 +28,8 @@ body {
   background-color: $cru-white;
 }
 
-.bs-defaults {
-  .container {
+.cru {
+  &-container {
     width: 100%;
     padding-right: $cru-grid-gutter-half-width;
     padding-left: $cru-grid-gutter-half-width;
@@ -48,7 +48,7 @@ body {
       max-width: $cru-container-max-width-xl;
     }
   }
-  .row {
+  &-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -57,24 +57,24 @@ body {
     margin-right: -$cru-grid-gutter-half-width;
     margin-left: -$cru-grid-gutter-half-width;
   }
-  .col {
+  &-col {
     &-3, &-9 {
       @include col-base;
     }
     &-3 {@include col-specs(25%);}
     &-9 {@include col-specs(75%);}
   }
-  .d-none {
+  &-d-none {
     display: none !important;
   }
-  .d-block {
+  &-d-block {
     display: block !important;
   }
   @media (min-width: $cru-grid-breakpoint-sm) {
-    .d-sm-none {
+    &-d-sm-none {
       display: none !important;
     }
-    .d-sm-inline-block {
+    &-d-sm-inline-block {
       display: inline-block !important;
     }
   }

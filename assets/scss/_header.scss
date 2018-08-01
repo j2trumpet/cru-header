@@ -26,15 +26,14 @@ body {
         }
       }
     }
-    #context-nav {
+  }
+  &.cru-org, &.staff-web {
+    #secondary-nav {
       display: none;
     }
   }
   &.give {
     #cru-header {
-      .fa-globe {
-        display: none !important;
-      }
       .fa-shopping-cart {
         @media (min-width: $cru-grid-breakpoint-sm) {
           margin-right: 0;
@@ -53,6 +52,40 @@ body {
       }
     }
   }
+  &.staff-web {
+    #cru-header {
+      border-top-color: $cru-scooter;
+      .signin {
+        margin-right: 0;
+      }
+      .fa-shopping-cart {
+        display: none !important;
+      }
+    }
+  }
+  &.give, &.staff-web, &.microsite {
+    #cru-header {
+      .fa-globe {
+        display: none !important;
+      }
+    }
+  }
+  &.microsite {
+    #cru-header {
+      .give {
+        display: inline-block;
+      }
+      .signin {
+        margin-right: 0;
+      }
+      .fa-shopping-cart {
+        display: none !important;
+      }
+    }
+    #primary-nav .fa-search {
+      display: none;
+    }
+  }
   &.stuck {
     height: 100%;
     overflow-y: hidden;
@@ -60,7 +93,7 @@ body {
 }
 
 #cru-header {
-  border-top: $cru-gold 2px solid;
+  border-top: $cru-buttercup 2px solid;
   padding-top: $cru-grid-gutter-half-width;
   padding-bottom: $cru-grid-gutter-half-width;
   .logo {
@@ -76,9 +109,9 @@ body {
   .header-nav {
     text-align: right;
     > a {
-      color: $cru-gray;
+      color: $cru-scorpion;
       &:hover {
-        color: $cru-gold;
+        color: $cru-buttercup;
       }
       img {
         width: auto;
@@ -94,7 +127,7 @@ body {
     position: relative;
     text-decoration: none;
   }
-  .signin {
+  .give, .signin {
     display: inline-block;
     cursor: pointer;
     margin-right: $top-header-nav-half-spacing;
@@ -106,12 +139,16 @@ body {
       display: block;
     }
   }
-  .signin > .signin-name, .header-nav-icon {
+  .give, .signin > .signin-name, .header-nav-icon {
     display: inline-block;
     line-height: $top-header-height-mobile;
     @media (min-width: $cru-grid-breakpoint-sm) {
       line-height: $top-header-height-desktop;
     }
+  }
+  .give {
+    display: none;
+    margin-right: $top-header-nav-spacing;
   }
   .signin, .header-nav-icon {
     vertical-align: top;
@@ -119,10 +156,10 @@ body {
   .cart-item-count {
     position: absolute;
     font-family: $cru-font-family-sans-serif;
-    color: $cru-gray;
+    color: $cru-scorpion;
     font-size: 11px;
     font-weight: 700;
-    background-color: $cru-gold;
+    background-color: $cru-buttercup;
     border-radius: 50%;
     width: 17px;
     text-align: center;
@@ -150,7 +187,7 @@ body {
       padding: 0;
       list-style-type: none;
       &:first-child a {
-        color: $cru-gold;
+        color: $cru-buttercup;
       }
     }
     a {
@@ -160,9 +197,9 @@ body {
       line-height: 26px;
       white-space: nowrap;
       text-decoration: none;
-      color: $cru-gray;
+      color: $cru-scorpion;
       &:hover {
-        color: $cru-gold;
+        color: $cru-buttercup;
       }
     }
     @media (max-width: $cru-grid-breakpoint-sm - 1px) {
@@ -175,30 +212,31 @@ body {
   }
 }
 
-#cru-header, #cru-nav {
+#cru-header, #primary-nav {
   font-family: $cru-font-family-sans-serif;
-  color: $cru-gray;
+  color: $cru-scorpion;
   background-color: $cru-white;
-  border-bottom: $cru-silver 1px solid;
+  border-bottom: $cru-scorpion-alt 1px solid;
 }
 
 #cru-header .signin,
-#cru-nav .top-nav a,
-#context-nav a {
+#cru-header .give,
+#primary-nav .top-nav a,
+#secondary-nav a {
   position: relative;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  color: $cru-gray;
+  color: $cru-scorpion;
   text-decoration: none;
   letter-spacing: .3px;
   &:hover {
-    color: $cru-gold;
+    color: $cru-buttercup;
   }
 }
 
-#cru-nav, #context-nav {
+#primary-nav, #secondary-nav {
   ul, li {
     margin: 0;
     padding: 0;
@@ -206,14 +244,17 @@ body {
   }
 }
 
-#cru-nav .top-nav, #context-nav ul {
+#primary-nav .top-nav li:nth-child(2), #secondary-nav ul li:first-child {
+  a {
+    padding-left: 0;
+  }
+}
+
+#primary-nav .top-nav, #secondary-nav ul {
   white-space: nowrap;
   overflow-x: auto;
   li {
     display: inline-block;
-    &:first-child a {
-      padding-left: 0;
-    }
   }
   a {
     display: block;
@@ -233,7 +274,7 @@ body {
   }
 }
 
-#cru-nav {
+#primary-nav {
   @media (max-width: $cru-grid-breakpoint-sm - 1px) {
     display: none;
   }
@@ -245,23 +286,23 @@ body {
     line-height: $top-header-height-desktop;
     padding-right: $top-header-nav-quarter-spacing;
     text-decoration: none;
-    color: $cru-gray;
+    color: $cru-scorpion;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     &:hover {
-      color: $cru-gold;
+      color: $cru-buttercup;
     }
   }
 }
 
-#context-nav {
+#secondary-nav {
   font-family: $cru-font-family-sans-serif;
-  background-color: $cru-gray;
+  background-color: $cru-scorpion;
   a {
     color: $cru-white;
     font-weight: 500;
     &.active {
-      color: $cru-gold;
+      color: $cru-buttercup;
     }
   }
 }
@@ -272,10 +313,10 @@ body {
   left: 0;
   width: 100%;
   z-index: 1;
-  background-color: $cru-gray;
+  background-color: $cru-scorpion;
   color: $cru-white;
   text-align: center;
-  .container {
+  .cru-container {
     display: none;
     padding-top: 70px;
     padding-bottom: 70px;

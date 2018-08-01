@@ -12,22 +12,27 @@
 
 <body class="cru-org">
 
-  <div id="dev-controls" class="bs-defaults">
-    <div class="container">
+  <!-- DEV TOOLS -->
+  <div id="dev-controls">
+    <div class="cru-container">
       <a href="#" name="cru-org" class="active">Cru.org</a>
       <a href="#" name="cru-org full-cart">Cru.org w/ full cart</a>
-      <a href="#" name="give">Give</a>
-      <a href="#" name="give full-cart">Give w/ full cart</a>
+      <a href="#" name="give">Give/CruStore</a>
+      <a href="#" name="give full-cart">Give/CruStore w/ full cart</a>
+      <a href="#" name="staff-web">Staff Web</a>
+      <a href="#" name="microsite">Microsite</a>
     </div>
   </div>
 
-  <header id="cru-header" class="bs-defaults cru-org">
-    <div class="container">
-      <div class="row">
-        <div class="col-3">
-          <a href="http://cru.org" class="logo"><img src="/assets/images/cru-logo.png" alt="logo" /></a>
+  <!-- CRU HEADER -->
+  <header id="cru-header">
+    <div class="cru-container">
+      <div class="cru-row">
+        <div class="cru-col-3">
+          <a href="http://cru.org" class="logo"><img src="/assets/images/cru-logo.png" alt="logo" title="Cru.org" /></a>
         </div>
-        <div class="col-9 header-nav">
+        <div class="cru-col-9 header-nav">
+          <a href="#" class="give">Give</a>
           <div class="signin">
             <span class="signin-name">John Plastow</span><i class="far fa-chevron-down"></i>
             <ul class="user-menu">
@@ -36,42 +41,46 @@
               <li><a href="#">Sign Out</a></li>
             </ul>
           </div>
-          <a href="#" class="d-none d-sm-inline-block header-nav-icon fal fa-globe"></a>
-          <a href="#" class="d-inline-block header-nav-icon fal fa-shopping-cart"><span class="cart-item-count">77</span></a>
-          <a href="#" class="d-inline-block d-sm-none header-nav-icon far fa-bars"></a>
+          <a href="#" class="cru-d-none cru-d-sm-inline-block header-nav-icon fal fa-globe"></a>
+          <a href="#" class="cru-d-inline-block header-nav-icon fal fa-shopping-cart"><span class="cart-item-count">77</span></a>
+          <a href="#" class="cru-d-inline-block cru-d-sm-none header-nav-icon far fa-bars"></a>
         </div>
       </div>
     </div>
   </header>
 
-  <nav id="cru-nav" class="bs-defaults">
-    <div class="container">
+  <!-- PRIMARY NAV -->
+  <nav id="primary-nav">
+    <div class="cru-container">
       <a href="#" class="fal fa-search"></a>
       <ul class="top-nav">
+        <li class="search cru-d-sm-none"><a href="#">Search <i class="fal fa-search"></i></a></li>
         <li><a href="#">How to Know God</a></li>
         <li><a href="#">Train &amp; Grow</a></li>
         <li><a href="#">Communities</a></li>
         <li><a href="#">Opportunities</a></li>
         <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
         <li><a href="#">Store</a></li>
         <li><a href="#">Give</a></li>
       </ul>
     </div>
   </nav>
 
-  <div id="search-bar" class="bs-defaults">
-    <div class="container">
+<!-- SEARCH BAR -->
+  <div id="search-bar">
+    <div class="cru-container">
       <input type="text" placeholder="SEARCH" name="q" />
       <i class="far fa-times search-close"></i>
     </div>
   </div>
 
-  <nav id="context-nav" class="bs-defaults">
-    <div class="container">
+  <!-- SECONDARY NAV -->
+  <nav id="secondary-nav">
+    <div class="cru-container">
       <ul>
         <li><a href="#" class="active"><i class="fas fa-home"></i></a></li>
         <li><a href="#">Start a New Gift</a></li>
-        <li><a href="#">Cart</a></li>
         <li><a href="#">Your Giving</a></li>
         <li><a href="#">Payment Methods</a></li>
         <li><a href="#">Profile</a></li>
@@ -81,8 +90,8 @@
     </div>
   </nav>
 
-  <section id="main-content" class="bs-defaults">
-    <div class="container">
+  <section id="main-content">
+    <div class="cru-container">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel lectus sodales, mollis est eget, euismod nibh. Integer pretium dui est, ut pretium sem molestie in. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin interdum tincidunt commodo. Aenean elementum tempus felis, et maximus quam laoreet nec. Nunc et arcu et leo varius imperdiet a id augue. Mauris eros est, varius sed auctor id, sollicitudin vel mi. Etiam cursus, nunc vel consectetur consectetur, leo est ultrices neque, non hendrerit diam orci et ante. Donec sed tellus sem. Vivamus id lacus ultrices sem sagittis aliquam. Praesent tincidunt libero tortor, eu posuere metus tincidunt eget. Suspendisse fringilla tortor volutpat, rhoncus neque eget, porta ligula. Proin volutpat metus risus, sit amet sodales nunc mattis et. Sed vitae iaculis lacus, ut porttitor justo. Aliquam sagittis nulla a odio malesuada congue. Duis gravida pulvinar dui eu congue.</p>
       <p>Phasellus hendrerit ligula in arcu dignissim, ac ornare odio bibendum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi sem sapien, tristique sit amet nisl ut, convallis porttitor risus. Nullam sapien felis, tincidunt et lorem quis, consequat blandit mauris. Nulla iaculis, turpis et suscipit tempor, metus erat dignissim arcu, quis iaculis eros felis ac nunc. Vestibulum at eleifend nibh. Sed molestie tincidunt convallis. Nam pretium tempor risus, in ultricies dolor malesuada et. Pellentesque ut ante sit amet magna gravida viverra nec eget elit. Suspendisse at ultricies mi. Mauris a molestie odio. Sed mollis nec justo et suscipit. In blandit dignissim sagittis. Nunc aliquet neque ut nisl vehicula, et egestas justo hendrerit. Quisque consequat tempor maximus. Cras turpis felis, bibendum posuere diam at, imperdiet aliquam metus.</p>
       <p>Suspendisse vel tortor ultrices, facilisis diam at, sagittis arcu. Mauris ornare risus non nisi convallis molestie. Etiam rutrum tempus efficitur. Donec luctus iaculis lacus, vitae malesuada lorem porttitor ut. Morbi euismod urna et turpis tincidunt bibendum. Suspendisse luctus est arcu, ut posuere lectus auctor congue. Vivamus blandit nunc ac tellus porttitor scelerisque. Aenean ultrices pharetra convallis. Morbi vitae tristique dui. In vitae tortor feugiat, luctus nunc quis, laoreet sem. Vestibulum vehicula sem mauris, quis rhoncus urna volutpat vel. Nam at fringilla neque, vitae finibus mi. Morbi euismod feugiat justo quis maximus. Nunc eget velit sed lorem luctus interdum ac sed magna. Nunc molestie justo eget auctor bibendum.</p>
@@ -98,18 +107,22 @@
 
   <script>
     // Search
-    var offset = jQuery( '#cru-nav' ).offset();
-    var searchTop = offset.top + jQuery( '#cru-nav' ).outerHeight() + 'px';
+    var offset = jQuery( '#primary-nav' ).offset();
+    var searchTop = offset.top + jQuery( '#primary-nav' ).outerHeight() + 'px';
     jQuery( '#search-bar' ).css( 'top', searchTop );
-    jQuery( '#cru-nav .fa-search' ).click( function( e ) {
-      e.preventDefault();
-      jQuery( '#search-bar .container' ).addClass( 'd-block' );
-      jQuery( this ).addClass( 'search-close' );
-      jQuery( 'body' ).addClass( 'stuck' );
+    jQuery( '#primary-nav .fa-search' ).click( function( e ) {
+      if ( jQuery( this ).attr( 'href' ) !== '#' ) {
+        alert('Go to URL');
+      } else {
+        e.preventDefault();
+        jQuery( '#search-bar .cru-container' ).addClass( 'cru-d-block' );
+        jQuery( this ).addClass( 'search-close' );
+        jQuery( 'body' ).addClass( 'stuck' );
+      }
     } );
     jQuery( '.search-close' ).click( function( e ) {
       e.preventDefault();
-      jQuery( '#search-bar .container' ).removeClass( 'd-block' );
+      jQuery( '#search-bar .cru-container' ).removeClass( 'cru-d-block' );
       jQuery( 'body' ).removeClass( 'stuck' );
     } );
   </script>
